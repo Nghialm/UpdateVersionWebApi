@@ -8,10 +8,6 @@ app.config["DEBUG"] = True
 def home():
     return "<h1>Distant Reading Archive</h1><p>This site is a prototype API for distant reading of science fiction novels.</p>"
 
-@app.route('/api/v1/resources/books/all', methods=['GET'])
-def api_all():
-    return jsonify(books)
-
 @app.route('/api/v1/resources/version/get', methods=['GET'])
 def api_update():
     fver = open("version.txt", "r")
